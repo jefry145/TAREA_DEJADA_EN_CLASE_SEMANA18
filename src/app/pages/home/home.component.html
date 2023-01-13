@@ -1,0 +1,60 @@
+<div class="row py-5">
+    <div class="col text-center">
+        <h2>BASE DE DATOS</h2>
+    </div>
+</div>
+<table class="table">
+    <thead  class="">
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Detalles</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let element of data">
+      <tr>
+        <th scope="row">{{element.id | json}}</th>
+        <td>{{element.title | json}}</td>
+        <td>{{element.userId | json}}</td>
+        <td><button class="btn btn-outline-warning" [routerLink]="['detalles',element.id ]">Detalles</button></td>
+      </tr>
+    </tbody>
+
+
+
+  <!-- </table>
+<div class="">
+    
+    <table>
+        <thead>
+          <td>ID</td>
+          <td>Title</td>
+          <td>User ID</td>
+        </thead>
+        <tbody *ngFor="let element of data">
+            <th>
+                {{element.id | json}}
+            </th>
+            <th>
+                {{element.title | json}}
+            </th>
+            <th>
+                {{element.userId | json}}
+            </th>
+            <th>
+                <button [routerLink]="['detalles',element.id ]">Detalles</button>
+            </th>
+        </tbody>
+    </table>
+</div> -->
+
+<!-- <button (click)="mostra()">dasd</button> -->
+<!-- 
+<div class="">
+    <ul *ngFor="let element of data">
+        <li>
+              {{element.id | json}}
+        </li>
+    </ul>
+</div> -->

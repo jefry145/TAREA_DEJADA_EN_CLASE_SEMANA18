@@ -1,0 +1,19 @@
+
+<div class="card py-4 px-4 font-monospace" style="width: 22rem;" *ngFor="let elemet of dataDetails">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{dataDetails[0].title}}</h5>
+      <span>State:</span>
+      <p [ngClass]="[validacion]" class="card-text">{{dataDetails[0].completed}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span>ID:</span>
+        <br>
+        {{dataDetails[0].id}}</li>
+      <li class="list-group-item">
+        <span>User ID:</span>
+        <br>
+        {{dataDetails[0].userId}}</li>
+    </ul>
+    <button class="btn btn-outline-dark" routerLink="/">Regresar</button>
+  </div>
